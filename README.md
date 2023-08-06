@@ -4,6 +4,7 @@ assignment to create blackjack
 This game is created in typescript using Pixi.js
 
 Deployment :
+
 Please download the source code and run the following commands in the terminal of the root folder:
   npm install
   -to install node modules
@@ -15,6 +16,7 @@ Please download the source code and run the following commands in the terminal o
   -to create a deployable version in the dist folder. (not really necessary, until deploying)
 
 Game Play :
+
 The game opens with a betting panel where the user can select and add up bet amounts by clicking on the chips. The initial Credit that the user has is EUR 1000 and the bet can only be less or equal to it.
 Closing the panel, the user gets an option to play the game. In case the user closes the betting panel without selecting a bet, it can be opened again but clicking the bet meter. As soon as the user clicks "PLAY" the cards are distributed and the bet gets deducted but is still visible in the bet meter. 
 Now the user can HIT or STAND and results are shown accordingly (after Dealer's cards reveal, or hit/stand decision). 
@@ -25,12 +27,14 @@ In-game messages can be seen on the top of the game screen.
 The game is scalable to be played in any screen ratio(though not positioned centrally)
 
 Game Logic :
+
 All cards have the same values except face cards. (J, Q, K being 10 and A being 11 or 1 at times)
 On every card draw the values of the player's cards are evaluated and then the user is given the choice of HIT or STAND accordingly. (i.e, if it's not a BUST or BLACKJACK)
 Once the user STANDs, or there's a BLACKJACK, the Dealer's card is revealed and checked for Dealer's choices. (HIT/STAND or a TIE)
 Dealer's HIT and STAND decision is made on a random basis here with a 50% probability of both.
 
 Disclaimer :
+
 I realized I missed a couple of points after creating the game and going through the requirements.
 - I used tweedle js instead of GSAP for tweening. I had already used tweedle.js before realizing the requirement of GSAP. I did not re-do it using Greensock considering the similarities between the both and also the time constraint.
 - I was doubtful about the 3rd point "The user can increase his wager". If it meant during the match or not, so I continued with a fixed bet for a match and deduct it before drawing cards. If it was the other way, I can surely add it to the Future Scope section.
